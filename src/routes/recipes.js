@@ -9,6 +9,10 @@ const generateUserAssociation = () => {
     return Math.floor(Math.random() * 10) + 1
 }
 
+const getRandomNumberBetweenRange = (min, max) => {
+    return Math.floor(Math.random() * (max - min)) + min
+}
+
 const generatePrice = () => {
     let max = 50
     let min = 9.99
@@ -20,6 +24,31 @@ const generatePrice = () => {
         return +price.toFixed(2)
     }
 }
+
+let recipeImages = [
+    "http://picturetherecipe.com/wp-content/uploads/2020/07/Butter-Chicken-PTR-Featured-680x900.jpg",
+    "http://picturetherecipe.com/wp-content/uploads/2020/04/Vanilla-Cardamom-Kulfi-PTR-Featured-680x900.jpg",
+    "http://picturetherecipe.com/wp-content/uploads/2020/04/Palak-Paneer-PTR-Featured-1-680x900.jpg",
+    "http://picturetherecipe.com/wp-content/uploads/2019/07/Grilled-Chicken-with-Fresh-Cherry-Salsa-Featured-1-395x500.jpg",
+    "http://picturetherecipe.com/wp-content/uploads/2020/01/Chicken-65-Wings-Indian-Masala-Wings-PTR-Featured-395x500.jpg",
+    "http://picturetherecipe.com/wp-content/uploads/2018/09/Banana-Bread-with-Honey-Oats-Walnuts-by-PictureTheRecipe-Featured-1-395x500.jpg",
+    "http://picturetherecipe.com/wp-content/uploads/2018/06/Chicken-Cutlets-by-PictureTheRecipe-Featured-395x500.jpg",
+    "http://picturetherecipe.com/wp-content/uploads/2018/06/Bombay-Grilled-Chutney-Sandwich-Featured-PictureTheRecipe-395x500.jpg",
+    "http://picturetherecipe.com/wp-content/uploads/2018/05/Persian-Chicken-Kebab-Featured-395x500.jpg",
+    "http://picturetherecipe.com/wp-content/uploads/2018/05/Spicy-Pork-Vindaloo-PictureTheRecipe-Featured-395x500.jpg",
+    "http://picturetherecipe.com/wp-content/uploads/2018/05/Bombay-Sloppy-Joes-PictureTheRecipe-Featured-395x500.jpg",
+    "http://picturetherecipe.com/wp-content/uploads/2018/04/Sweet-Sour-Salmon-Featured-395x500.jpg",
+    "http://picturetherecipe.com/wp-content/uploads/2018/03/Indian-Style-Lentils-PictureTheRecipe-Featured-395x500.jpg",
+    "http://picturetherecipe.com/wp-content/uploads/2018/04/Strawberry-Frech-Cake-PictureTheRecipe-Featured-395x500.jpg",
+    "http://picturetherecipe.com/wp-content/uploads/2018/03/Chili-Garlic-Beef-with-Zoodle-Stir-Fry-PictureTheRecipe-Featured-395x500.jpg",
+    "http://picturetherecipe.com/wp-content/uploads/2018/03/Black-Pepper-Soy-Chicken-Wings-Featured-395x500.jpg",
+    "http://picturetherecipe.com/wp-content/uploads/2018/04/Beet-Salad-with-Citrus-Tahini-Dressing-PTR-Featured-395x500.jpg",
+    "http://picturetherecipe.com/wp-content/uploads/2018/03/Sticky-Tamarind-Chicken-PictureThe-Recipe-Featured-2-395x500.jpg",
+    "http://picturetherecipe.com/wp-content/uploads/2018/02/Sali-Par-Edu-Indian-Style-Shakshouka-Featured-395x500.jpg",
+    "http://picturetherecipe.com/wp-content/uploads/2018/02/Lemongrass-Chicken-Dumplings-PictureTheRecipe-Featured-2-395x500.jpg",
+    "http://picturetherecipe.com/wp-content/uploads/2018/02/Greek-Meatballs-Featured-PictureTheRecipe-1-395x500.jpg",
+    "http://picturetherecipe.com/wp-content/uploads/2018/01/Spaghetti-Lamb-Bolognese-by-PTR-Featured-395x500.jpg",
+]
 
 let recipes = [
     {
@@ -91,7 +120,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://www.budgetbytes.com/wp-content/uploads/2013/07/Creamy-Tomato-Spinach-Pasta-close.jpg",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -103,7 +134,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://www.favfamilyrecipes.com/wp-content/uploads/2018/08/toffee-apples-2.jpg",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -115,7 +148,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://www.budgetbytes.com/wp-content/uploads/2013/07/Creamy-Tomato-Spinach-Pasta-close.jpg",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -127,7 +162,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://www.budgetbytes.com/wp-content/uploads/2013/07/Creamy-Tomato-Spinach-Pasta-close.jpg",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -139,7 +176,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://www.budgetbytes.com/wp-content/uploads/2013/07/Creamy-Tomato-Spinach-Pasta-close.jpg",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -151,7 +190,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://www.budgetbytes.com/wp-content/uploads/2013/07/Creamy-Tomato-Spinach-Pasta-close.jpg",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -163,7 +204,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://www.budgetbytes.com/wp-content/uploads/2013/07/Creamy-Tomato-Spinach-Pasta-close.jpg",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -175,7 +218,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://www.budgetbytes.com/wp-content/uploads/2013/07/Creamy-Tomato-Spinach-Pasta-close.jpg",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -187,7 +232,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://www.budgetbytes.com/wp-content/uploads/2013/07/Creamy-Tomato-Spinach-Pasta-close.jpg",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -199,7 +246,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://www.budgetbytes.com/wp-content/uploads/2013/07/Creamy-Tomato-Spinach-Pasta-close.jpg",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -211,7 +260,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://www.budgetbytes.com/wp-content/uploads/2013/07/Creamy-Tomato-Spinach-Pasta-close.jpg",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -223,7 +274,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://www.budgetbytes.com/wp-content/uploads/2013/07/Creamy-Tomato-Spinach-Pasta-close.jpg",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -235,7 +288,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://www.budgetbytes.com/wp-content/uploads/2013/07/Creamy-Tomato-Spinach-Pasta-close.jpg",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -247,7 +302,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://www.budgetbytes.com/wp-content/uploads/2013/07/Creamy-Tomato-Spinach-Pasta-close.jpg",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -259,7 +316,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://www.budgetbytes.com/wp-content/uploads/2013/07/Creamy-Tomato-Spinach-Pasta-close.jpg",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -271,7 +330,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://www.budgetbytes.com/wp-content/uploads/2013/07/Creamy-Tomato-Spinach-Pasta-close.jpg",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -283,7 +344,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://www.budgetbytes.com/wp-content/uploads/2013/07/Creamy-Tomato-Spinach-Pasta-close.jpg",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -295,7 +358,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://www.budgetbytes.com/wp-content/uploads/2013/07/Creamy-Tomato-Spinach-Pasta-close.jpg",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -307,7 +372,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://www.budgetbytes.com/wp-content/uploads/2013/07/Creamy-Tomato-Spinach-Pasta-close.jpg",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -319,7 +386,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://www.budgetbytes.com/wp-content/uploads/2013/07/Creamy-Tomato-Spinach-Pasta-close.jpg",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -331,7 +400,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://www.budgetbytes.com/wp-content/uploads/2013/07/Creamy-Tomato-Spinach-Pasta-close.jpg",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -343,7 +414,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://www.favfamilyrecipes.com/wp-content/uploads/2018/08/toffee-apples-2.jpg",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -355,7 +428,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?format=webp&v=1530129081",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -367,7 +442,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?format=webp&v=1530129081",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -379,7 +456,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?format=webp&v=1530129081",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -391,7 +470,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?format=webp&v=1530129081",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -403,7 +484,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?format=webp&v=1530129081",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -415,7 +498,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?format=webp&v=1530129081",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -427,7 +512,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://img.freepik.com/free-photo/fresh-buns-with-kiwi-jam-old-wooden-table_288431-3683.jpg?w=2000",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -439,7 +526,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://img.freepik.com/free-photo/homemade-waffle-tubes-blue-plate-white-background-with-copy-space_542566-651.jpg?w=2000",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -451,7 +540,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?format=webp&v=1530129081",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -463,7 +554,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?format=webp&v=1530129081",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -475,7 +568,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://jajabakes.com/wp-content/uploads/2019/09/walnut-stuffed-red-dates-3.jpg",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -487,7 +582,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://thetoastykitchen.com/wp-content/uploads/2020/01/strawberry-rice-krispies-treats-toasty-kitchen-02.jpg",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -499,7 +596,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?format=webp&v=1530129081",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -511,7 +610,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?format=webp&v=1530129081",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -523,7 +624,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?format=webp&v=1530129081",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -535,7 +638,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?format=webp&v=1530129081",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -547,7 +652,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://img.freepik.com/free-photo/fresh-buns-with-kiwi-jam-old-wooden-table_288431-3683.jpg?w=2000",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -559,7 +666,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?format=webp&v=1530129081",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -571,7 +680,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?format=webp&v=1530129081",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -583,7 +694,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?format=webp&v=1530129081",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -595,7 +708,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?format=webp&v=1530129081",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -607,7 +722,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://thetoastykitchen.com/wp-content/uploads/2020/01/strawberry-rice-krispies-treats-toasty-kitchen-02.jpg",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
     {
@@ -619,7 +736,9 @@ let recipes = [
             "Eiusmod ex ad adipisicing quis non in voluptate.\n - Aliquip nostrud aliquip elit ea qui dolore. \n - Consequat sint commodo id.\n - Irure nulla laboris nulla elit. \n - Tempor aliquip non dolore fugiat aliqua cupidatat culpa enim aliqua. ",
         details:
             "Excepteur incididunt nostrud dolor nostrud sunt esse. Incididunt elit deserunt aute labore eiusmod reprehenderit magna ex consequat nostrud ea aliquip ipsum et velit.",
-        img: "https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?format=webp&v=1530129081",
+        img: recipeImages[
+            getRandomNumberBetweenRange(0, recipeImages.length - 1)
+        ],
         likes: generateLikes(),
     },
 ]
