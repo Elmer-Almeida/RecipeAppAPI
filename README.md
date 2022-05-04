@@ -6,14 +6,12 @@ A quick and simple express API dedicated to serving a list of users and recipes 
 
 This API serves two functions:
 
-- *Provide a list of users*
-
+- **Provide a list of users**
   - First name
   - Last name
   - Image
 
-- *Provide a list of recipes*
-
+- **Provide a list of recipes**
   - User ID
   - Image
   - Name
