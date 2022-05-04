@@ -1,18 +1,18 @@
 {
-    "name": "recipeapp",
-    "version": "1.0.0",
-    "description": "This is the API for the Recipe Application for the iOS group project.",
-    "main": "server.js",
-    "scripts": {
-        "dev": "nodemon server.js",
-        "start": "node server.js"
-    },
-    "author": "Elmer Almeida",
-    "license": "ISC",
-    "dependencies": {
-        "express": "^4.17.3",
-        "cors": "^2.8.5",
-        "express-validator": "^6.14.0",
-        "dotenv": "^16.0.0"
-    }
+  "name": "recipeapp",
+  "version": "1.0.0",
+  "description": "This is the API for the Recipe Application for the iOS group project.",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "author": "Elmer Almeida",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "cors": "^2.8.5",
+    "express-validator": "^6.14.0",
+    "dotenv": "^16.0.0"
+  }
 }

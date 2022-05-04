@@ -1,28 +1,28 @@
-# Recipe Application API
+# iOS Recipe Management Application API
 
-This is a codebase dedicated to creating a quick and simple API for retrieving users and recipes.
+A quick and simple express API dedicated to serving a list of users and recipes for an iOS Recipe Management Application.
 
-# Features
+## Features
 
-This API serves two functions.
+This API serves two functions:
 
--   Provide a list of users
+- *Provide a list of users*
 
-    -   First name
-    -   Last name
-    -   Image
+  - First name
+  - Last name
+  - Image
 
--   Provide a list of recipes
+- *Provide a list of recipes*
 
-    -   User ID
-    -   Image
-    -   Name
-    -   Instructions
-    -   Excerpt
-    -   Price
-    -   Likes
+  - User ID
+  - Image
+  - Name
+  - Instructions
+  - Excerpt
+  - Price
+  - Likes
 
-# Usage
+## Usage
 
 In the `RecipeAppAPI` root folder, run the following command to install all `node` dependencies.
 
@@ -30,12 +30,12 @@ In the `RecipeAppAPI` root folder, run the following command to install all `nod
 npm install
 ```
 
-Then run the following command to start the server and serve the `RecipeAppAPI` application.
+Then run the following command to start the server and serve the `RecipeAppAPI` server.
 
 ```sh
-npm run dev
+npm start
 ```
 
-### Contact
+## Contact
 
-Elmer Almeida - almeielm@sheridancollege.ca
+Elmer Almeida - [almeielm@sheridancollege.ca](mailto:almeielm@sheridancollege.ca)
